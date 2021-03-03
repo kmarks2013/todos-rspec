@@ -8,5 +8,7 @@ feature "User creates a todo" do
 
         fill_in "Title", with: "Buy Milk" #this is for filling out a form
         click_on "Submit" #this is for clicking on a link or a button
+
+        expect(page).to have_css '.todos li', text:'Buy Milk'
     end
 end
