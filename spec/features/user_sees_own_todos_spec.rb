@@ -2,9 +2,9 @@ require 'rails_helper'
 
 feature "User sees own todos" do
     scenario "doesn't see others todos" do
-        Todo.create!(title:"Buy Eggs", email: "someone_else@example.com")
-        sing_in_as "someone@example.com"
+        Todo.create!(title:"Buy Milk", email: "someone_else@example.com")
+        sign_in_as "someone@example.com"
 
-        expect(page).not_to have_css ".todos li", text: "Buys milk"
+        expect(page).not_to have_css ".todos li", text: "Buy Milk"
     end
 end
