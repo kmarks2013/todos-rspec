@@ -9,10 +9,6 @@ class ApplicationController < ActionController::Base
         current_user.signed_in?
     end
 
-    # def current_email
-    #     session[:current_email]
-    # end
-
     def sign_in_as(email)
         session[:current_email] = email
     end
