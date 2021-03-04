@@ -6,7 +6,7 @@ feature "User completes a todo" do
 
         create_todo("Buy Milk")
 
-        click_on "Complete Todo"
+        click_on "Mark complete"
 
         expect(page).to display_completed_todo "Buy Milk"
     end
